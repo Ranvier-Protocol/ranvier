@@ -35,7 +35,7 @@ jobs:
       # Design tokens: no colour or pixel literals outside apps/web/src/styles/tokens.css.
       - run: pnpm guard:tokens
       - name: Cache Playwright browsers
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
